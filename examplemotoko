@@ -1,0 +1,32 @@
+actor calculator{
+  var hucre: Int = 0;
+
+  public func addition  (s: Int)  : async Int {
+    hucre += s ;
+    hucre
+  };
+  
+  public func subtraction (s:Int) : async Int {
+    hucre -= s ;
+    hucre
+  };
+
+  public func multiplication (s:Int) : async Int {
+    hucre *= s ;
+    hucre
+  };
+
+  public func division (s:Int) : async ?Int {
+    if (s == 0){
+    null 
+    }else{
+      hucre /= s ;
+      ?hucre
+    }
+  };
+
+  public func cleaner (): async () {
+    hucre :=0;
+  };
+
+  };
